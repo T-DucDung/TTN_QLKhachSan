@@ -31,11 +31,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.xacNhanBt = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.xacNhanBt = new System.Windows.Forms.Button();
             this.huyBt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.themBt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -67,6 +68,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách của khách hàng";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(547, 167);
+            this.dataGridView2.TabIndex = 6;
+            // 
             // xacNhanBt
             // 
             this.xacNhanBt.Location = new System.Drawing.Point(378, 426);
@@ -75,14 +84,6 @@
             this.xacNhanBt.TabIndex = 7;
             this.xacNhanBt.Text = "Xác nhận";
             this.xacNhanBt.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(547, 167);
-            this.dataGridView2.TabIndex = 6;
             // 
             // huyBt
             // 
@@ -96,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(407, 194);
+            this.label1.Location = new System.Drawing.Point(13, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 8;
@@ -104,16 +105,26 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(466, 191);
+            this.textBox1.Location = new System.Drawing.Point(72, 188);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 9;
+            // 
+            // themBt
+            // 
+            this.themBt.Location = new System.Drawing.Point(252, 186);
+            this.themBt.Name = "themBt";
+            this.themBt.Size = new System.Drawing.Size(75, 23);
+            this.themBt.TabIndex = 10;
+            this.themBt.Text = "Thêm";
+            this.themBt.UseVisualStyleBackColor = true;
             // 
             // DichVuVaDoDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.themBt);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.xacNhanBt);
@@ -141,5 +152,6 @@
         private System.Windows.Forms.Button huyBt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button themBt;
     }
 }

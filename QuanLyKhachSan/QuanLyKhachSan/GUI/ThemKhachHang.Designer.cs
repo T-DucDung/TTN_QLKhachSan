@@ -217,7 +217,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThemKhachHang";
-            this.Text = "ThemKhachHang";
             ((System.ComponentModel.ISupportInitialize)(this.phongDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

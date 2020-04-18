@@ -36,6 +36,9 @@
             this.datTruocBt = new System.Windows.Forms.Button();
             this.lichSuBt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timKiemTb = new System.Windows.Forms.TextBox();
+            this.timBt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +68,7 @@
             this.addKHBt.TabIndex = 1;
             this.addKHBt.Text = "Thêm khách hàng";
             this.addKHBt.UseVisualStyleBackColor = true;
+            this.addKHBt.Click += new System.EventHandler(this.addKHBt_Click);
             // 
             // checkInBt
             // 
@@ -74,6 +78,7 @@
             this.checkInBt.TabIndex = 2;
             this.checkInBt.Text = "Check-in";
             this.checkInBt.UseVisualStyleBackColor = true;
+            this.checkInBt.Click += new System.EventHandler(this.checkInBt_Click);
             // 
             // checkOutBt
             // 
@@ -83,6 +88,7 @@
             this.checkOutBt.TabIndex = 3;
             this.checkOutBt.Text = "Check-out";
             this.checkOutBt.UseVisualStyleBackColor = true;
+            this.checkOutBt.Click += new System.EventHandler(this.checkOutBt_Click);
             // 
             // datTruocBt
             // 
@@ -92,6 +98,7 @@
             this.datTruocBt.TabIndex = 4;
             this.datTruocBt.Text = "Đặt trước";
             this.datTruocBt.UseVisualStyleBackColor = true;
+            this.datTruocBt.Click += new System.EventHandler(this.datTruocBt_Click);
             // 
             // lichSuBt
             // 
@@ -101,22 +108,52 @@
             this.lichSuBt.TabIndex = 5;
             this.lichSuBt.Text = "Lịch sử";
             this.lichSuBt.UseVisualStyleBackColor = true;
+            this.lichSuBt.Click += new System.EventHandler(this.lichSuBt_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(178, 47);
+            this.label1.Location = new System.Drawing.Point(180, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(544, 46);
             this.label1.TabIndex = 6;
             this.label1.Text = "Phần mềm quản lý khách sạn";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(390, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Tìm kiếm:";
+            // 
+            // timKiemTb
+            // 
+            this.timKiemTb.Location = new System.Drawing.Point(448, 130);
+            this.timKiemTb.Name = "timKiemTb";
+            this.timKiemTb.Size = new System.Drawing.Size(216, 20);
+            this.timKiemTb.TabIndex = 8;
+            // 
+            // timBt
+            // 
+            this.timBt.Location = new System.Drawing.Point(670, 128);
+            this.timBt.Name = "timBt";
+            this.timBt.Size = new System.Drawing.Size(102, 23);
+            this.timBt.TabIndex = 9;
+            this.timBt.Text = "Tìm kiếm";
+            this.timBt.UseVisualStyleBackColor = true;
+            this.timBt.Click += new System.EventHandler(this.timBt_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.timBt);
+            this.Controls.Add(this.timKiemTb);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lichSuBt);
             this.Controls.Add(this.datTruocBt);
@@ -147,5 +184,8 @@
         private System.Windows.Forms.Button datTruocBt;
         private System.Windows.Forms.Button lichSuBt;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox timKiemTb;
+        private System.Windows.Forms.Button timBt;
     }
 }
