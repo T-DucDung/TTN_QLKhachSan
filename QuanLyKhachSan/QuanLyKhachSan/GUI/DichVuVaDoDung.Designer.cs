@@ -84,6 +84,7 @@
             this.xacNhanBt.TabIndex = 7;
             this.xacNhanBt.Text = "Xác nhận";
             this.xacNhanBt.UseVisualStyleBackColor = true;
+            this.xacNhanBt.Click += new System.EventHandler(this.xacNhanBt_Click);
             // 
             // huyBt
             // 
@@ -93,6 +94,7 @@
             this.huyBt.TabIndex = 5;
             this.huyBt.Text = "Huỷ";
             this.huyBt.UseVisualStyleBackColor = true;
+            this.huyBt.Click += new System.EventHandler(this.huyBt_Click);
             // 
             // label1
             // 
@@ -118,6 +120,7 @@
             this.themBt.TabIndex = 10;
             this.themBt.Text = "Thêm";
             this.themBt.UseVisualStyleBackColor = true;
+            this.themBt.Click += new System.EventHandler(this.themBt_Click);
             // 
             // DichVuVaDoDung
             // 

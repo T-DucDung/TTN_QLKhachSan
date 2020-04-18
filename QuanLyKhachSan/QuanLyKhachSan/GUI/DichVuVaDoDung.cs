@@ -12,9 +12,24 @@ namespace QuanLyKhachSan.GUI
 {
     public partial class DichVuVaDoDung : Form
     {
-        public DichVuVaDoDung()
+        public DichVuVaDoDung(int MaHoaDon)
         {
             InitializeComponent();
+        }
+
+        private void themBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void huyBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xacNhanBt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
