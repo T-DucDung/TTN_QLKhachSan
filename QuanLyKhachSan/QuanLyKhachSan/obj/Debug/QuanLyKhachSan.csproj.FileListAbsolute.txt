@@ -11,3 +11,16 @@ D:\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.
 D:\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.ChonPhong.resources
 D:\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.DichVuVaDoDung.resources
 D:\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.ThemKhachHang.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojAssemblyReference.cache
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.ChonPhong.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.DichVuVaDoDung.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.MainForm.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.ThemKhachHang.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
