@@ -15,8 +15,8 @@ namespace QuanLyKhachSan
             dds = (from DataRow dr in datatable.Rows
                     select new DoDung()
                     {
-                        MaDD = dr["MaDD"].ToString(),
-                        TenDD = dr["TenDD"].ToString(),
+                        Ma = dr["MaDD"].ToString(),
+                        Ten = dr["TenDD"].ToString(),
                         Gia = (decimal)dr["Gia"],
                         DonVi = dr["DonVi"].ToString()
                     }).ToList();
@@ -28,11 +28,28 @@ namespace QuanLyKhachSan
             dvs = (from DataRow dr in datatable.Rows
                    select new DichVu()
                    {
-                       MaDV = dr["MaDV"].ToString(),
-                       TenDV = dr["TenDV"].ToString(),
+                       Ma = dr["MaDV"].ToString(),
+                       Ten = dr["TenDV"].ToString(),
                        Gia = (decimal)dr["Gia"]
                    }).ToList();
             return dvs;
+        }
+        public List<SuDung> ConvertSS(DataTable tbdd, DataTable tbdv)
+        {
+            List<SuDung> ss = new List<SuDung>();
+            List<DichVu> dvs = new List<DichVu>();
+            dvs = ConvertDV(tbdv);
+            List<DoDung> dds = new List<DoDung>();
+            dds = ConvertDD(tbdd);
+            foreach(SuDung item in dds)
+            {
+                ss.Add(item);
+            }
+            foreach (SuDung item in dvs)
+            {
+                ss.Add(item);
+            }
+            return ss;
         }
         public List<DichVu> GetDanhSachDichVu()
         {
@@ -49,6 +66,16 @@ namespace QuanLyKhachSan
             string query = "select * from DoDung";
             data = DataProvider.Instance.ExecuteQuery(query);
             return ConvertDD(data);
+        }
+        public List<SuDung> GetDanhSachSuDung()
+        {
+            DataTable datadd;
+            string query1 = "select * from DoDung";
+            DataTable datadv;
+            string query2 = "select * from DichVu";
+            datadd = DataProvider.Instance.ExecuteQuery(query1);
+            datadv = DataProvider.Instance.ExecuteQuery(query2);
+            return ConvertSS(datadd,datadv);
         }
         public bool LuuDanhSachSuDung(List<DanhSachDVDD> ds, int mahd)
         {

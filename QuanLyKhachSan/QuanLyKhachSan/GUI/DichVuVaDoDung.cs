@@ -15,6 +15,7 @@ namespace QuanLyKhachSan.GUI
         private Control_DVDD con = new Control_DVDD();
         private List<DichVu> dvs = new List<DichVu>();
         private List<DoDung> dds = new List<DoDung>();
+        private List<SuDung> sds = new List<SuDung>();
         private List<DanhSachDVDD> ds = new List<DanhSachDVDD>();
         private int rowIndexDS = 0;
         private int rowIndex = 0;
@@ -34,14 +35,29 @@ namespace QuanLyKhachSan.GUI
                 {
                     DoDung dd = dds[rowIndex];
                     decimal tong = Convert.ToInt32(textBoxSoLuong.Text) * dd.Gia;
-                    DanhSachDVDD them = new DanhSachDVDD(dd.MaDD,dd.TenDD,Convert.ToInt32(textBoxSoLuong.Text),tong, true);
+                    DanhSachDVDD them = new DanhSachDVDD(dd.Ma,dd.Ten,Convert.ToInt32(textBoxSoLuong.Text),tong, true);
                     ds.Add(them);
                 }
                 else if (comboBoxChon.SelectedItem.ToString() == "Dịch Vụ")
                 {
                     DichVu dv = dvs[rowIndex];
                     decimal tong = Convert.ToInt32(textBoxSoLuong.Text) * dv.Gia;
-                    DanhSachDVDD them = new DanhSachDVDD(dv.MaDV, dv.TenDV, Convert.ToInt32(textBoxSoLuong.Text), tong, false);
+                    DanhSachDVDD them = new DanhSachDVDD(dv.Ma, dv.Ten, Convert.ToInt32(textBoxSoLuong.Text), tong, false);
+                    ds.Add(them);
+                }
+                else if (comboBoxChon.SelectedItem.ToString() == "Tất Cả")
+                {
+                    SuDung sd = sds[rowIndex];
+                    decimal tong = Convert.ToInt32(textBoxSoLuong.Text) * sd.Gia;
+                    bool check = true;
+                    foreach(DichVu item in dvs)
+                    {
+                        if(item.Ma == sd.Ma)
+                        {
+                            check = false;
+                        }
+                    }
+                    DanhSachDVDD them = new DanhSachDVDD(sd.Ma, sd.Ten, Convert.ToInt32(textBoxSoLuong.Text), tong, check);
                     ds.Add(them);
                 }
                 GetDSChon();
@@ -92,13 +108,22 @@ namespace QuanLyKhachSan.GUI
             dataGridViewDanhSach.Columns[0].Visible = false;
             dataGridViewDanhSach.Columns[4].Visible = false;
         }
+        private void GetDSTatCa()
+        {
+            dataGridViewChon.DataSource = null;
+            dataGridViewChon.DataSource = sds;
+            dataGridViewChon.Columns[1].HeaderText = "Tên ";
+            dataGridViewChon.Columns[2].HeaderText = "Giá";
+            dataGridViewChon.Columns[0].Visible = false;
+        }
 
         private void DichVuVaDoDung_Load(object sender, EventArgs e)
         {
             dvs = con.GetDanhSachDichVu();
             dds = con.GetDanhSachDichDung();
-            comboBoxChon.SelectedItem = "Đồ Dùng";
-            GetDSDD();
+            sds = con.GetDanhSachSuDung();
+            comboBoxChon.SelectedItem = "Tất Cả";
+            GetDSTatCa();
         }
 
         private void comboBoxChon_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,6 +135,10 @@ namespace QuanLyKhachSan.GUI
             else if(comboBoxChon.SelectedItem.ToString() == "Dịch Vụ")
             {
                 GetDSDV();
+            }
+            else if(comboBoxChon.SelectedItem.ToString() == "Tất Cả")
+            {
+                GetDSTatCa();
             }
             themBt.Enabled = false;
         }

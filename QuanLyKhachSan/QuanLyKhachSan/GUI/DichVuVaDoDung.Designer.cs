@@ -32,6 +32,7 @@
             this.comboBoxChon = new System.Windows.Forms.ComboBox();
             this.dataGridViewChon = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewDanhSach = new System.Windows.Forms.DataGridView();
             this.xacNhanBt = new System.Windows.Forms.Button();
             this.huyBt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,11 +40,10 @@
             this.themBt = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewDanhSach = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChon)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxChon
@@ -52,7 +52,8 @@
             this.comboBoxChon.FormattingEnabled = true;
             this.comboBoxChon.Items.AddRange(new object[] {
             "Đồ Dùng",
-            "Dịch Vụ"});
+            "Dịch Vụ",
+            "Tất Cả"});
             this.comboBoxChon.Location = new System.Drawing.Point(601, 15);
             this.comboBoxChon.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxChon.Name = "comboBoxChon";
@@ -83,6 +84,17 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách của khách hàng";
+            // 
+            // dataGridViewDanhSach
+            // 
+            this.dataGridViewDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDanhSach.Location = new System.Drawing.Point(0, 31);
+            this.dataGridViewDanhSach.Name = "dataGridViewDanhSach";
+            this.dataGridViewDanhSach.RowTemplate.Height = 24;
+            this.dataGridViewDanhSach.Size = new System.Drawing.Size(734, 224);
+            this.dataGridViewDanhSach.TabIndex = 0;
+            this.dataGridViewDanhSach.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewDanhSach_MouseClick);
             // 
             // xacNhanBt
             // 
@@ -156,17 +168,6 @@
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
-            // dataGridViewDanhSach
-            // 
-            this.dataGridViewDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhSach.Location = new System.Drawing.Point(0, 31);
-            this.dataGridViewDanhSach.Name = "dataGridViewDanhSach";
-            this.dataGridViewDanhSach.RowTemplate.Height = 24;
-            this.dataGridViewDanhSach.Size = new System.Drawing.Size(734, 224);
-            this.dataGridViewDanhSach.TabIndex = 0;
-            this.dataGridViewDanhSach.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewDanhSach_MouseClick);
-            // 
             // DichVuVaDoDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -186,8 +187,8 @@
             this.Load += new System.EventHandler(this.DichVuVaDoDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChon)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
