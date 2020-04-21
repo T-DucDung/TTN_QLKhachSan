@@ -167,6 +167,7 @@
             this.chonPhongBt.TabIndex = 14;
             this.chonPhongBt.Text = "Chọn phòng";
             this.chonPhongBt.UseVisualStyleBackColor = true;
+            this.chonPhongBt.Click += new System.EventHandler(this.ChonPhongBt_Click);
             // 
             // huyBt
             // 
@@ -176,6 +177,7 @@
             this.huyBt.TabIndex = 15;
             this.huyBt.Text = "Huỷ";
             this.huyBt.UseVisualStyleBackColor = true;
+            this.huyBt.Click += new System.EventHandler(this.HuyBt_Click);
             // 
             // xacNhanBt
             // 
@@ -185,6 +187,7 @@
             this.xacNhanBt.TabIndex = 16;
             this.xacNhanBt.Text = "Xác nhận";
             this.xacNhanBt.UseVisualStyleBackColor = true;
+            this.xacNhanBt.Click += new System.EventHandler(this.XacNhanBt_Click);
             // 
             // phongDataGrid
             // 
@@ -217,6 +220,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThemKhachHang";
+            this.Load += new System.EventHandler(this.ThemKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.phongDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
