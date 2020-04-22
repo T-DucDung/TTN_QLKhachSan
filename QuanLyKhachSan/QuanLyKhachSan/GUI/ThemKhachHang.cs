@@ -24,5 +24,10 @@ namespace QuanLyKhachSan.GUI
             InitializeComponent();
             this.Name = "Đặt phòng";
         }
+
+        private void huyBt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

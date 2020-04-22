@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMainForm = new System.Windows.Forms.DataGridView();
             this.addKHBt = new System.Windows.Forms.Button();
             this.checkInBt = new System.Windows.Forms.Button();
             this.checkOutBt = new System.Windows.Forms.Button();
@@ -39,26 +40,42 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timKiemTb = new System.Windows.Forms.TextBox();
             this.timBt = new System.Windows.Forms.Button();
+            this.tNN_QLKSDataSet = new QuanLyKhachSan.TNN_QLKSDataSet();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.khachHangTableAdapter = new QuanLyKhachSan.TNN_QLKSDataSetTableAdapters.KhachHangTableAdapter();
+            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMainForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tNN_QLKSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewMainForm);
             this.panel1.Location = new System.Drawing.Point(12, 164);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(760, 385);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dataGridViewMainForm
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(760, 385);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewMainForm.AutoGenerateColumns = false;
+            this.dataGridViewMainForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMainForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maKHDataGridViewTextBoxColumn,
+            this.tenKHDataGridViewTextBoxColumn,
+            this.sDTDataGridViewTextBoxColumn,
+            this.cMTDataGridViewTextBoxColumn});
+            this.dataGridViewMainForm.DataSource = this.khachHangBindingSource;
+            this.dataGridViewMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMainForm.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewMainForm.Name = "dataGridViewMainForm";
+            this.dataGridViewMainForm.Size = new System.Drawing.Size(760, 385);
+            this.dataGridViewMainForm.TabIndex = 0;
             // 
             // addKHBt
             // 
@@ -146,6 +163,48 @@
             this.timBt.UseVisualStyleBackColor = true;
             this.timBt.Click += new System.EventHandler(this.timBt_Click);
             // 
+            // tNN_QLKSDataSet
+            // 
+            this.tNN_QLKSDataSet.DataSetName = "TNN_QLKSDataSet";
+            this.tNN_QLKSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // khachHangBindingSource
+            // 
+            this.khachHangBindingSource.DataMember = "KhachHang";
+            this.khachHangBindingSource.DataSource = this.tNN_QLKSDataSet;
+            // 
+            // khachHangTableAdapter
+            // 
+            this.khachHangTableAdapter.ClearBeforeFill = true;
+            // 
+            // maKHDataGridViewTextBoxColumn
+            // 
+            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.HeaderText = "Mã Khách Hàng";
+            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
+            this.maKHDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // tenKHDataGridViewTextBoxColumn
+            // 
+            this.tenKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenKHDataGridViewTextBoxColumn.DataPropertyName = "TenKH";
+            this.tenKHDataGridViewTextBoxColumn.HeaderText = "Tên Khách Hàng";
+            this.tenKHDataGridViewTextBoxColumn.Name = "tenKHDataGridViewTextBoxColumn";
+            // 
+            // sDTDataGridViewTextBoxColumn
+            // 
+            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "Số Điện Thoại";
+            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
+            this.sDTDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // cMTDataGridViewTextBoxColumn
+            // 
+            this.cMTDataGridViewTextBoxColumn.DataPropertyName = "CMT";
+            this.cMTDataGridViewTextBoxColumn.HeaderText = "Chứng Minh Thư";
+            this.cMTDataGridViewTextBoxColumn.Name = "cMTDataGridViewTextBoxColumn";
+            this.cMTDataGridViewTextBoxColumn.Width = 150;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,8 +226,11 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý khách sạn";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMainForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tNN_QLKSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +239,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewMainForm;
         private System.Windows.Forms.Button addKHBt;
         private System.Windows.Forms.Button checkInBt;
         private System.Windows.Forms.Button checkOutBt;
@@ -187,5 +249,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox timKiemTb;
         private System.Windows.Forms.Button timBt;
+        private TNN_QLKSDataSet tNN_QLKSDataSet;
+        private System.Windows.Forms.BindingSource khachHangBindingSource;
+        private TNN_QLKSDataSetTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMTDataGridViewTextBoxColumn;
     }
 }

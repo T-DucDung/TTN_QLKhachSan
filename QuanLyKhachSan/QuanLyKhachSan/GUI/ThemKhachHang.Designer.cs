@@ -176,6 +176,7 @@
             this.huyBt.TabIndex = 15;
             this.huyBt.Text = "Huỷ";
             this.huyBt.UseVisualStyleBackColor = true;
+            this.huyBt.Click += new System.EventHandler(this.huyBt_Click);
             // 
             // xacNhanBt
             // 
@@ -217,6 +218,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThemKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.phongDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
