@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan.GUI
 {
-    //khách hàng mới đến thì dùng thêm khách hàng, khách hàng đã đến thì dùng đặt phòng để hcọn phòng,
+    //khách hàng mới đến thì dùng thêm khách hàng, khách hàng đã đến thì dùng đặt phòng để chọn phòng,
     //khi khách hàng đến thì checkin, đi thì check-out, trong trường hợp huỷ phòng thì cx dùng checkout để huỷ
     //lịch sử là số phòng khách hàng đã đến
     //khách hàng được lựa chọn ở bên dataview bên dưới, tìm kiếm áp dụng cho các trường cmt sdt và tên khách hàng
@@ -26,6 +26,9 @@ namespace QuanLyKhachSan.GUI
         private void addKHBt_Click(object sender, EventArgs e)
         {
 
+            ThemKhachHang formThemKhachHang = new ThemKhachHang();
+            //formThemKhachHang.FormClosed += FormThemKhachHang_FormClosed;
+            formThemKhachHang.ShowDialog();
         }
 
         private void checkInBt_Click(object sender, EventArgs e)
@@ -50,7 +53,37 @@ namespace QuanLyKhachSan.GUI
 
         private void timBt_Click(object sender, EventArgs e)
         {
+            if (timKiemTb.Text == "")
+            {
+                MessageBox.Show("Phải nhập thông tin");
+            }
+            else
+            {
+                if (comboBox_LoaiThongTin.Text == "")
+                {
+                    MessageBox.Show("Phải chọn loại thông tin");
+                }
+                else
+                {
+                    if (comboBox_LoaiThongTin.Text == "CMT")
+                    {
+                        dataGridView1.DataSource = KhachHangController.TKKhachHangCMT(timKiemTb.Text);
+                    }
+                    else if (comboBox_LoaiThongTin.Text == "SĐT")
+                    {
+                        dataGridView1.DataSource = KhachHangController.TKKhachHangSDT(timKiemTb.Text);
+                    }
+                    else if (comboBox_LoaiThongTin.Text == "Họ tên")
+                    {
+                        dataGridView1.DataSource = KhachHangController.TKKhachHangHoTen(timKiemTb.Text);
+                    }
+                }
+            }
+        }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = KhachHangController.HTTatCaKhachHang();
         }
     }
 }

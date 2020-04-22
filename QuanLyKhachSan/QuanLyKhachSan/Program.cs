@@ -17,7 +17,8 @@ namespace QuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DichVuVaDoDung(0));
+            Application.Run(new MainForm());
+            //Application.Run(new DichVuVaDoDung(0));
         }
     }
 }
