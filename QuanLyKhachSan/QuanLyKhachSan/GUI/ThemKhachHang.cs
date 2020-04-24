@@ -100,11 +100,13 @@ namespace QuanLyKhachSan.GUI
 
         private void HuyBt_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
 
         private void ThemKhachHang_Load(object sender, EventArgs e)
         {
             theoGioRb.Checked = true;
+        }
         }
     }
 }
