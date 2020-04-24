@@ -24,3 +24,16 @@ C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\o
 C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
 C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 C:\Users\Welcome\Documents\GitHub\TTN_QLKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojAssemblyReference.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.ChonPhong.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.DichVuVaDoDung.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.MainForm.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.ThemKhachHang.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_KhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb

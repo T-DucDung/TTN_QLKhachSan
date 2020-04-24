@@ -31,14 +31,19 @@
             this.phongDataGrid = new System.Windows.Forms.DataGridView();
             this.huyBt = new System.Windows.Forms.Button();
             this.xacNhanBt = new System.Windows.Forms.Button();
+            this.checkPhong = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.phongDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // phongDataGrid
             // 
+            this.phongDataGrid.AllowUserToAddRows = false;
             this.phongDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.phongDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.checkPhong});
             this.phongDataGrid.Location = new System.Drawing.Point(12, 12);
             this.phongDataGrid.Name = "phongDataGrid";
+            this.phongDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.phongDataGrid.Size = new System.Drawing.Size(560, 398);
             this.phongDataGrid.TabIndex = 0;
             // 
@@ -50,6 +55,7 @@
             this.huyBt.TabIndex = 1;
             this.huyBt.Text = "Huỷ";
             this.huyBt.UseVisualStyleBackColor = true;
+            this.huyBt.Click += new System.EventHandler(this.HuyBt_Click);
             // 
             // xacNhanBt
             // 
@@ -59,6 +65,13 @@
             this.xacNhanBt.TabIndex = 2;
             this.xacNhanBt.Text = "Xác nhận";
             this.xacNhanBt.UseVisualStyleBackColor = true;
+            this.xacNhanBt.Click += new System.EventHandler(this.XacNhanBt_Click);
+            // 
+            // checkPhong
+            // 
+            this.checkPhong.HeaderText = "Chọn Phòng";
+            this.checkPhong.Name = "checkPhong";
+            this.checkPhong.ReadOnly = true;
             // 
             // ChonPhong
             // 
@@ -70,6 +83,7 @@
             this.Controls.Add(this.phongDataGrid);
             this.Name = "ChonPhong";
             this.Text = "Chọn phòng";
+            this.Load += new System.EventHandler(this.ChonPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.phongDataGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -80,5 +94,6 @@
         private System.Windows.Forms.DataGridView phongDataGrid;
         private System.Windows.Forms.Button huyBt;
         private System.Windows.Forms.Button xacNhanBt;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkPhong;
     }
 }
